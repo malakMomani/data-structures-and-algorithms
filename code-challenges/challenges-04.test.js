@@ -79,11 +79,13 @@ Return an array containing all the matches.
 
 const isCapitalized = (str) => {
   // Solution code here...
-  //This regex works in the regexer tools , when I use * or + it return null 
-  let reg = /[A-Z][a-z]*/g;
-
+  //This regex works in the regexer tools
+  let reg = /[A-Z]\w+/g;
   let result = str.match(reg);
-  return result;
+  if(reg.test(str)){
+    return result;
+  }
+  return [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -93,13 +95,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 const citiesAtoJ = (arr) => {
   // Solution code here...
-  let reg = /[A-J]/g;
+  let reg = /^[A-J]/;
   let localArr = [];
   arr.forEach(element => {
-    if (element.match(reg) !== null) {
+    if (reg.test(element)) {
       localArr.push(element);
     }
   });
+
   return localArr;
 };
 
