@@ -95,7 +95,9 @@ const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
   let result = input.map(element => {
     return element.filter(n => {
+      if(typeof n === 'number'){
       return (n % 5 === 0);
+      }
     });
   });
   let mathResult =[];
@@ -104,6 +106,7 @@ const divisibleByFiveTwoToThePower = (input) => {
       return Math.pow(2,number);
     }));
   });
+  console.log(mathResult);
   return mathResult;
 };
 
