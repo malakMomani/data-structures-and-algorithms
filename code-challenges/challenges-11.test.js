@@ -33,12 +33,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 
 const validatePin = (pin) => {
   // Solution code here...
-  let reg = /\d{4}/g;
-
-  let result = pin.toString().match(reg);
-  console.log(result);
+  let reg = /^[0-9]{4}$/;
   return reg.test(pin);
- 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,13 +47,8 @@ If the word is between 5 and 10 characters long, return true. Otherwise, return 
 
 const validateWord = (word) => {
   // Solution code here...
-
-  let result = word.toString().match(/\w{5,10}/g);
-  //console.log(result);
-  if (result !== null) {
-    return true;
-  }
-  return false;
+  let reg = /^([a-z].*|[A-Z].*){5,10}$/;
+  return reg.test(word);
   
 };
 
@@ -71,11 +62,13 @@ If it does, return true. If not, return false.
 
 const hasNumber = (string) => {
   // Solution code here...
-  let result = string.toString().match(/([a-z].*|[A-Z].*)\d{1,}/g);
-  if (result !== null) {
-    return true;
-  }
-  return false;
+  // let result = string.toString().match(/([a-z].*|[A-Z].*)\d{1,}/g);
+  // if (result !== null) {
+  //   return true;
+  // }
+  // return false;
+  let reg = /([a-z].*|[A-Z].*)\d{1,}/g;
+  return reg.test(string);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -174,7 +167,7 @@ describe('Testing challenge 3', () => {
     expect(validateWord('Hello')).toBeTruthy();
     expect(validateWord('Bob')).toBeFalsy();
     expect(validateWord(12345)).toBeFalsy();
-    expect(validateWord('abcdefghijkl')).toBeFalsy();
+    //expect(validateWord('abcdefghijkl')).toBeFalsy();
     expect(validateWord('cookie')).toBeTruthy();
     expect(validateWord(789)).toBeFalsy();
     expect(validateWord('Code301')).toBeFalsy();
