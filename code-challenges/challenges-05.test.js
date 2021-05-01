@@ -1,3 +1,6 @@
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable eol-last */
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -6,22 +9,21 @@ CHALLENGE 1 - Review
 Write a function called sortStarWarsCharacters that sorts the characters in the starWarsPeople array by height from tallest to shortest.
 ------------------------------------------------------------------------------------------------ */
 
-let starWarsPeople = [
-  {
-    "name": "C-3PO",
-    "height": "167",
-    "eye_color": "yellow"
-  },
-  {
-    "name": "Luke Skywalker",
-    "height": "172",
-    "eye_color": "blue"
-  },
-  {
-    "name": "R2-D2",
-    "height": "96",
-    "eye_color": "red"
-  }
+let starWarsPeople = [{
+  'name': 'C-3PO',
+  'height': '167',
+  'eye_color': 'yellow'
+},
+{
+  'name': 'Luke Skywalker',
+  'height': '172',
+  'eye_color': 'blue'
+},
+{
+  'name': 'R2-D2',
+  'height': '96',
+  'eye_color': 'red'
+}
 ];
 
 const sortStarWarsCharacters = (starWarsArr) => {
@@ -30,7 +32,7 @@ const sortStarWarsCharacters = (starWarsArr) => {
     return b.height - a.height;
   });
   return starWarsArr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -52,7 +54,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  let localArr = arr.join(" ");
+  let localArr = arr.join(' ');
   return localArr;
 
 };
@@ -75,11 +77,11 @@ const howMuchPencil = (str) => {
   // Solution code here...
   let len = str.slice().length;
   result.push(str);
-  for (let index = 0; index < len ; index++) {
+  for (let index = 0; index < len; index++) {
     str = str.substr(1);
     result.push(str);
   }
-    return result;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -198,6 +200,12 @@ For example:
 
 const removeEvenValues = (arr) => {
   // Solution code here...
+  for (let index = 0; index < arr.length; index++) {
+    if (arr[index] % 2 === 0) {
+      arr.splice(index, 1);
+    }
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -217,8 +225,16 @@ removeLastCharacters('Gregor', 9) returns ''
 
 const removeLastCharacters = (str, numberOfCharacters) => {
   // Solution code here...
+  let newStr = '';
+  if (numberOfCharacters > 0) {
+    newStr = str.substr(0, str.slice().length - numberOfCharacters);
+  } else if (numberOfCharacters < 0) {
+    newStr = str;
+  } else if (numberOfCharacters > str.slice().length) {
+    newStr = '';
+  }
+  return newStr;
 };
-
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -228,7 +244,12 @@ Write a function named totalSumCSV that, given a string of comma-separated value
 
 const totalSumCSV = (str) => {
   let total = 0;
+  let localArr = str.split(',');
   // Solution code here...
+  for (let index = 0; index < localArr.length; index++) {
+    total += parseInt(localArr[index]);
+
+  }
   return total;
 };
 
@@ -243,6 +264,7 @@ For example, removeVowels('gregor') returns 'grgr'.
 
 const removeVowels = (str) => {
   // Solution code here...
+  let vowels = [];
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -270,26 +292,26 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
-  })
+  });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should return an array with three items removed', () => {
     expect(removeThree(2, [1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([1, 2, 6, 7, 8]);
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should join an array', () => {
     expect(joinArray(['hello', '301', 'students'])).toStrictEqual('hello 301 students');
   });
 });
 
-describe('Testing challenge 4', () => {
+xdescribe('Testing challenge 4', () => {
   test('It should return a list of shortening words', () => {
     expect(howMuchPencil('Welcome')).toStrictEqual(['Welcome', 'elcome', 'lcome', 'come', 'ome', 'me', 'e', '']);
     expect(howMuchPencil('Welcome').length).toStrictEqual(8);
@@ -298,7 +320,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+xdescribe('Testing challenge 5', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
@@ -307,7 +329,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-describe('Testing challenge 6', () => {
+xdescribe('Testing challenge 6', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
@@ -340,7 +362,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should shorten the string based on the first argument', () => {
     expect(removeLastCharacters('Gregor', 2)).toStrictEqual('Greg');
     expect(removeLastCharacters('Gregor', 2).length).toStrictEqual(4);
@@ -356,7 +378,7 @@ xdescribe('Testing challenge 10', () => {
   });
 });
 
-xdescribe('Testing challenge 11', () => {
+describe('Testing challenge 11', () => {
   test('It should add up the numbers contained within the string', () => {
     expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
     expect(totalSumCSV('147')).toStrictEqual(147);

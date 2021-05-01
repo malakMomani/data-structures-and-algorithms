@@ -58,9 +58,9 @@ CHALLENGE 4
 
 Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 
-Then, write a function named `speaker` that takes in an array of strings and a callback function. 
+Then, write a function named `speaker` that takes in an array of strings and a callback function.
 
-Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
+Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array.
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
@@ -153,12 +153,12 @@ const fizzbuzz = (arr) => {
   arr.forEach(element => {
     if (element / 3 === 0) {
       localArr.push('Fizz');
-    } 
-     if (element / 5 === 0) {
+    }
+    if (element / 5 === 0) {
       localArr.push('Buzz');
 
-    } 
-     if (element / 3 === 0 & element / 5 === 0) {
+    }
+    if (element / 3 === 0 & element / 5 === 0) {
       localArr.push('Fizz Buzz');
     }
     localArr.push(element);

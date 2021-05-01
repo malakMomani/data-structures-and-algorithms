@@ -15,8 +15,7 @@ const raisedToTheThird = (arr) => {
     localArr.push(Math.pow(element,3));
   });
   return localArr;
-}
-
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 

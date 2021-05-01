@@ -1,28 +1,29 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 1 - Review
 
-Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'. 
+Write a function named replaceZeros that, given a string, uses Regex to replace all '0' with the word 'zero'.
 ------------------------------------------------------------------------------------------------ */
 
 const replaceZeros = (string) => {
   // Solution code here...
   const newStr = string.replace(/0/g,'zero');
   return newStr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
   // Solution code here...
   const localArr = arr.map(element => { return element + 1; });
   return localArr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -34,7 +35,7 @@ const addQuestion = (arr) => {
   // Solution code here...
   const localArr = arr.map(element => { return `${element}?`; });
   return localArr;
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4

@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -5,13 +6,13 @@ CHALLENGE 1 - Review
 
 Write a function named getNames that, given an array of people objects, uses map to return an array of names reversed.
 
-For example: 
+For example:
 [
 {
   name: 'lloyd',
   age: 32,
   shoeSize: 12
-}, 
+},
 {
   name: 'jamie',
   age: 21,
@@ -25,7 +26,7 @@ Returns: ['dyoll', 'eimaj'];
 const getNames = (arr) => {
   // Solution code here...
   let reverse = arr.map((element) => {
-    return element.name.split("").reverse().join("");
+    return element.name.split('').reverse().join('');
   });
   return reverse;
 };
@@ -45,7 +46,7 @@ const count = (target, input) => {
   let filtered = input.map(element => {
     return element.filter(num => {
       return num === target;
-    })
+    });
   });
 
   return filtered.reduce((acc, element) => {
@@ -111,7 +112,7 @@ const divisibleByFiveTwoToThePower = (input) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5 
+CHALLENGE 5
 
 Write a function named findMaleAndFemale that, given the Star Wars data, below,
 returns the names of the characters whose gender is either male or female.
@@ -184,7 +185,7 @@ let findMaleAndFemale = (data) => {
 };
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 6 
+CHALLENGE 6
 
 Write a function named findShortest that, given the Star Wars data from Challenge 6, uses any combination of filter, map and reduce to return the name of the shortest character.
 ------------------------------------------------------------------------------------------------ */

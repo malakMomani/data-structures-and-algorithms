@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -9,49 +10,48 @@ Use the characters data below for all of the challenges except challenge 2 and 3
 Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
 ------------------------------------------------------------------------------------------------ */
-let characters = [
-  {
-    name: 'Eddard',
-    spouse: 'Catelyn',
-    children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
-    house: 'Stark'
-  },
-  {
-    name: 'Jon A.',
-    spouse: 'Lysa',
-    children: ['Robin'],
-    house: 'Arryn'
-  },
-  {
-    name: 'Cersei',
-    spouse: 'Robert',
-    children: ['Joffrey', 'Myrcella', 'Tommen'],
-    house: 'Lannister'
-  },
-  {
-    name: 'Daenarys',
-    spouse: 'Khal Drogo',
-    children: ['Drogon', 'Rhaegal', 'Viserion'],
-    house: 'Targaryen'
-  },
-  {
-    name: 'Mace',
-    spouse: 'Alerie',
-    children: ['Margaery', 'Loras'],
-    house: 'Tyrell'
-  },
-  {
-    name: 'Euron',
-    spouse: null,
-    children: [],
-    house: 'Greyjoy'
-  },
-  {
-    name: 'Jon S.',
-    spouse: null,
-    children: [],
-    house: 'Snow'
-  }
+let characters = [{
+  name: 'Eddard',
+  spouse: 'Catelyn',
+  children: ['Robb', 'Sansa', 'Arya', 'Bran', 'Rickon'],
+  house: 'Stark'
+},
+{
+  name: 'Jon A.',
+  spouse: 'Lysa',
+  children: ['Robin'],
+  house: 'Arryn'
+},
+{
+  name: 'Cersei',
+  spouse: 'Robert',
+  children: ['Joffrey', 'Myrcella', 'Tommen'],
+  house: 'Lannister'
+},
+{
+  name: 'Daenarys',
+  spouse: 'Khal Drogo',
+  children: ['Drogon', 'Rhaegal', 'Viserion'],
+  house: 'Targaryen'
+},
+{
+  name: 'Mace',
+  spouse: 'Alerie',
+  children: ['Margaery', 'Loras'],
+  house: 'Tyrell'
+},
+{
+  name: 'Euron',
+  spouse: null,
+  children: [],
+  house: 'Greyjoy'
+},
+{
+  name: 'Jon S.',
+  spouse: null,
+  children: [],
+  house: 'Snow'
+}
 ];
 
 const sortByChildren = (charArray) => {
@@ -70,7 +70,8 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
 const courseInfo = {
-  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
+  name: 'Code 301',
+  duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -101,14 +102,14 @@ const checkValues = (obj, value) => {
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
-You are given an object with names and their coresponding phone numbers that looks like this: 
+You are given an object with names and their coresponding phone numbers that looks like this:
 {
   'Grace Hopper': '222-303-5938',
   'Ada Lovelace': '222-349-9842',
   'Alan Turing': '222-853-5933'
 }
 
-HR has asked you to change the data to make it easier to print so that it looks like this: 
+HR has asked you to change the data to make it easier to print so that it looks like this:
 [
   'Grace Hopper: 222-303-5938',
   'Ada Lovelace: 222-349-9842',
@@ -121,8 +122,8 @@ const updateNumbers = (obj) => {
   // Solution code here...
   const entries = Object.entries(obj);
   let arr = [];
-  entries.forEach(element =>{
-    arr.push(element[0]+': '+element[1]);
+  entries.forEach(element => {
+    arr.push(element[0] + ': ' + element[1]);
   });
   console.log(arr);
   return arr;
@@ -161,11 +162,10 @@ const hasChildrenValues = (arr, character) => {
   // Solution code here...
   let char = [];
   arr.forEach(element => {
-    if(element.name === character){
-      char = element.children;
+    if (element.name === character) {
+      char.push(element.children);
     }
   });
-  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -270,7 +270,7 @@ describe('Testing challenge 4', () => {
       'Grace Hopper': '222-303-5938',
       'Ada Lovelace': '222-349-9842',
       'Alan Turing': '222-853-5933'
-    }
+    };
 
     expect(updateNumbers(startingObj).includes('Grace Hopper: 222-303-5938')).toBe(true);
   });

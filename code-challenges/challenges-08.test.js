@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +61,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 const oddValues = (arr) => {
   // Solution code here...
   let odds = arr.filter(n => {
-    return n % 2
+    return n % 2;
   });
   return odds;
 };
@@ -97,8 +98,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
   let newArr = arr.filter((n ,i) =>{
-      return !(forbiddenValues.includes(n));
-    
+    return !(forbiddenValues.includes(n));
   });
   return newArr;
 };

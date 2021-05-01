@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 /* ------------------------------------------------------------------------------------------------
@@ -5,13 +6,13 @@ CHALLENGE 1 - Review
 
 Write a function named transformToLis that, given an object, returns an array of the key value pairs as html list items.
 
-For example: 
+For example:
 {
   name: 'bob',
   age: 32
 }
 
-Becomes: 
+Becomes:
 [
 <li>name: bob</li>,
 <li>age: 32</li>
@@ -22,7 +23,7 @@ function transformToLis(obj) {
   // Solution code here...
   let localArr = [];
   for (const key in obj) {
-    localArr.push(`<li>${key}: ${obj[key]}</li>`)
+    localArr.push(`<li>${key}: ${obj[key]}</li>`);
   }
   return localArr;
 }
@@ -158,10 +159,10 @@ const reversedString = (str) => {
   // Solution code here...
   let localArr = str.split('');
   let reversedString = localArr.reduce((reversed, character) => {
-    return character + reversed
-  }, '')
+    return character + reversed;
+  }, '');
 
-  return reversedString
+  return reversedString;
 
 };
 
