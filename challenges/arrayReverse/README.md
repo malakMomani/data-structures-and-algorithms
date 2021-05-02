@@ -12,4 +12,4 @@ Big O is O(n)
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Solution](./assets/array-reverse.jpg)
+![Solution](../assets/array-reverse.jpg)
