@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 'use strict';
 
 // Require the linked list implementation
@@ -13,4 +14,4 @@ module.exports = function reverse(list) {
 
   return true;
 
-}
+};
