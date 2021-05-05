@@ -6,6 +6,7 @@
 | ------------- |:-------------:| -----:|
 | code challenge 1      | Array Reverse | [link](challenges/arrayReverse/array-reverse.js) |
 | code challenge 2      | Array shift      |   [link](challenges/arrayShift/array-shift.js) [test unit](challenges/__tests__/array-shift.test.js) |
+| code challenge 3      | Array binary search      |   [link](challenges/arrayBinarySearch/array-binary-search.js) [test unit](challenges/__tests__/array-binary-search.test.js) |
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
