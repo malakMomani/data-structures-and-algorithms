@@ -53,4 +53,38 @@ describe('Linked List Data Structure', ()=>{
     ll2.insert('first');
     expect(ll2.toString()).toStrictEqual('{ first } -> NULL');
   });
+
+  /////////////////////////////// code challenge 06 //////////////////////////////
+
+  let ll2 = new LinkedList.LinkedList();
+  it('Can successfully add a node to the end of the linked list',()=>{
+    ll2.append(99);
+    expect(ll2.toString()).toStrictEqual('{ 99 } -> NULL');
+  });
+  it('Can successfully add multiple nodes to the end of a linked list', ()=>{
+    ll2.append(100);
+    ll2.append(101);
+    ll2.append(102);
+    expect(ll2.toString()).toStrictEqual('{ 99 } -> { 100 } -> { 101 } -> { 102 } -> NULL');
+  });
+
+  it('Can successfully insert a node before a node located in the middle of a linked list', ()=>{
+    ll2.insertBefore(101,100.5);
+    expect(ll2.toString()).toStrictEqual('{ 99 } -> { 100 } -> { 100.5 } -> { 101 } -> { 102 } -> NULL');
+  });
+
+  it('Can successfully insert a node before the first node of a linked list', ()=>{
+    ll2.insertBefore(99,98);
+    expect(ll2.toString()).toStrictEqual('{ 98 } -> { 99 } -> { 100 } -> { 100.5 } -> { 101 } -> { 102 } -> NULL');
+  });
+
+  it('Can successfully insert after a node in the middle of the linked list', ()=>{
+    ll2.insertAfter(100, 100.1);
+    expect(ll2.toString()).toStrictEqual('{ 98 } -> { 99 } -> { 100 } -> { 100.1 } -> { 100.5 } -> { 101 } -> { 102 } -> NULL');
+  });
+
+  it('Can successfully insert a node after the last node of the linked list', ()=>{
+    ll2.insertAfter(102, 103);
+    expect(ll2.toString()).toStrictEqual('{ 98 } -> { 99 } -> { 100 } -> { 100.1 } -> { 100.5 } -> { 101 } -> { 102 } -> { 103 } -> NULL');
+  });
 });
