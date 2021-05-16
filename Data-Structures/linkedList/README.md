@@ -21,3 +21,13 @@ insert -> if the array is empty it will assign the value to the head node , if n
 includes -> will loop throw the nodes in the list and check if the value exist in any node and return true if not will return false
 
 toString -> will loop throw the nodes and take the value to print it in string in specific format
+
+<!-- code challenge 06 -->
+
+append -> if the array is empty it will assign the value to the head node , if not will traverse to the end of the array then append the element in the end of the list
+
+insertBefore -> if the array is empty will throw no such value error, if have one item it will insert the newNode in the beginning, if there's a lot , first will check the first item if it's equal to the value , if true will insert in the beginning if not will loop throw the linked list and find the node of the value if exist willl insert before it , if not will throw new error
+
+insert After -> if the array is empty will throw no such value error , if I have item I will looping throw it until I find the node of the value if exist will insert the newNode after it. if not exist will throw no such valur error
+
+![WhiteBoard](assets/codechalleng06.png)
