@@ -88,3 +88,42 @@ describe('Linked List Data Structure', ()=>{
     expect(ll2.toString()).toStrictEqual('{ 98 } -> { 99 } -> { 100 } -> { 100.1 } -> { 100.5 } -> { 101 } -> { 102 } -> { 103 } -> NULL');
   });
 });
+/////////////////////////////// code challenge 07 //////////////////////////////\
+describe('kthFromEnd Function' ,()=>{
+
+  let ll = new LinkedList.LinkedList();
+  ll.append(20);
+  ll.append(30);
+  ll.append(40);
+  ll.append(50);
+  ll.append(60);
+
+  it('throw error where k is greater than the length of the linked list', () => {
+    expect(() => {
+      ll.kthFromEnd(5);
+    }).toThrow();
+  });
+
+  it('return the first value where k and the length of the list are the same',()=>{
+    expect(ll.kthFromEnd(4)).toEqual(20);
+  });
+
+  it('throw error Where k is not a positive integer' ,()=>{
+    expect(()=>{
+      ll.kthFromEnd(-22);
+    }).toThrow();
+  });
+
+  it('Where the linked list is of a size 1',()=>{
+    let ll1 = new LinkedList.LinkedList();
+    ll1.append('one');
+    expect(ll1.kthFromEnd(0)).toEqual('one');
+  });
+
+  it('“Happy Path” where k is not at the end, but somewhere in the middle of the linked list',()=>{
+    expect(ll.kthFromEnd(3)).toEqual(30);
+    expect(ll.kthFromEnd(1)).toEqual(50);
+  });
+});
+
+

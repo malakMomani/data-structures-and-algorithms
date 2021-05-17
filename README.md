@@ -9,6 +9,7 @@
 | code challenge 3      | Array binary search      |   [link](challenges/arrayBinarySearch/array-binary-search.js) [test unit](challenges/__tests__/array-binary-search.test.js) |
 | code challenge 5      | Linked List      |   [link](Data-Structures/linkedList/linked-list.js) [test unit](Data-Structures/__tests__/linked-list.test.js) |
 | code challenge 6      | Linked List Insertions      |   [link](Data-Structures/linkedList/linked-list.js) [test unit](Data-Structures/__tests__/linked-list.test.js) |
+| code challenge 7      | kthFromEnd      |   [link](Data-Structures/linkedList/linked-list.js) [test unit](Data-Structures/__tests__/linked-list.test.js) |
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
