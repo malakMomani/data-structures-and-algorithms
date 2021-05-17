@@ -153,6 +153,31 @@ class LinkedList {
     throw new Error('No such value');
 
   }
+
+  /////////////////////////////////// code challenge 07 //////////////////////////////////////
+
+  kthFromEnd(k) {
+    if(!this.head){
+      throw new Error('Empty Linked List');
+    } else {
+
+      if(k<0){
+        throw new Error('invalid k value , not positive number');
+      }
+
+      if(k+1 > this.size) {
+        throw new Error('k greater than the length');
+      } else {
+        let rounds = this.size - (k+1);
+        let currentNode = this.head;
+        while(rounds) {
+          currentNode = currentNode.next;
+          rounds--;
+        }
+        return currentNode.value;
+      }
+    }
+  }
 }
 
 module.exports = {
