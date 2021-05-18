@@ -17,7 +17,6 @@ check if element of the middle is greater than the targeted value then will modi
 repeat this process until return something
 if the loop is end without returning then the element not exist and will return -1
 
-
 ## Solution
 <!-- Embedded whiteboard image -->
 ![Solution](/assets/array-binary-search.png)
