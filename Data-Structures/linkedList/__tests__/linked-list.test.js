@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 'use strict';
 
-const LinkedList = require('../linkedList/linked-list.js');
+const LinkedList = require('../linked-list.js');
 
 let ll = new LinkedList.LinkedList();
 
