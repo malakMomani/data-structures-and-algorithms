@@ -30,9 +30,9 @@ insertBefore -> if the array is empty will throw no such value error, if have on
 
 insert After -> if the array is empty will throw no such value error , if I have item I will looping throw it until I find the node of the value if exist will insert the newNode after it. if not exist will throw no such valur error
 
-![WhiteBoard](assets/codechalleng06.png)
+![WhiteBoard](/assets/codechalleng06.png)
 
 <!-- code challenge 07 -->
 kthFromEnd -> pass k as parameter, and return the kth element start counting from the end of the list, check if the array is empty then will throw new error , if not will check the k , if it's more than list size will throe an error , if it's negative number also will throw an error, if all is okay , wil calculate the rounds to reach the kth in the list by find the difference between the this.size and the k , after looping return the current.value
 
-![WhiteBoard](assets/kthFromEnd.png)
+![WhiteBoard](/assets/kthFromEnd.png)
