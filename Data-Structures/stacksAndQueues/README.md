@@ -37,5 +37,5 @@ dequeue -> will remove the front node in the queue, throw error if the stack is 
 peek -> will return the value of the front of the stack, throw error if the stack is empty.
 isEmpty -> return true if the queue is empty otherwise returm false
 
-![WhiteBoard](assets/stack-white.png)
-![queue](assets/queue-white.png)
+![WhiteBoard](../../assets/stack-white.png)
+![queue](../../assets/queue-white.png)
