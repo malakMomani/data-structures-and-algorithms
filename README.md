@@ -12,6 +12,7 @@
 | code challenge 7      | kthFromEnd      |   [link](Data-Structures/linkedList/linked-list.js) [test unit](Data-Structures/__tests__/linked-list.test.js) |
 | code challenge 8      | Linked List Zip      |   [link](Data-Structures/linkedList/linked-list.js) [test unit](Data-Structures/linkedList/__tests__/linked-list.test.js) |
 | code challenge 10      | Stack and Queue      |   [link](Data-Structures/stacksAndQueues/stacks-and-queues.js) [test unit](Data-Structures/stacksAndQueues/__tests__/stack-and-queue.test.js) |
+| code challenge 11      | Stack With Queue      |   [link](challenges/queueWithStacks/queue-with-stacks.js) [test unit](challenges/__tests__/queue-with-stacks.test.js) |
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 

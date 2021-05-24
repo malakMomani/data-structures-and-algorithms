@@ -94,5 +94,6 @@ class Queue{
 
 module.exports = {
   Stack: Stack,
-  Queue: Queue
+  Queue: Queue,
+  Node: Node
 };
