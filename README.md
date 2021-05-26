@@ -14,6 +14,7 @@
 | code challenge 10      | Stack and Queue      |   [link](Data-Structures/stacksAndQueues/stacks-and-queues.js) [test unit](Data-Structures/stacksAndQueues/__tests__/stack-and-queue.test.js) |
 | code challenge 11      | Stack With Queue      |   [link](challenges/queueWithStacks/queue-with-stacks.js) [test unit](challenges/__tests__/queue-with-stacks.test.js) |
 | code challenge 12      | Animal Shelter      |   [link](challenges/fifoAnimalShelter/fifo-animal-shelter.js) [test unit](challenges/__tests__/fifo-animal-shelter.test.js) |
+| code challenge 13      | Multi Bracket Validation.      |   [link](challenges/multi-bracket-validation/multi-bracket-validation.js) [test unit](challenges/__tests__/multi-bracket-validation.test.js) |
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 
