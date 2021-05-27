@@ -1,28 +1,26 @@
 /* eslint-disable no-unused-vars */
 'use strict';
 
-const Queue = require('../../Data-Structures/stacksAndQueues/stacks-and-queues.js');
+const Stack = require('../../Data-Structures/stacksAndQueues/stacks-and-queues.js');
 
 function multiBracketValidation(input) {
-  let queue = new Queue.Queue();
-  let inputReversed = input.split('').reverse().join('');
-  // console.log(input, inputReversed,input.length);
+  let stack = new Stack.Stack();
   for (let i = 0; i < input.length; i++) {
-    if(inputReversed.charAt(i) === ')' || inputReversed.charAt(i) === ']' || inputReversed.charAt(i) === '}'){
-      queue.enqueue(inputReversed.charAt(i));
+    if(input.charAt(i) === '(' || input.charAt(i) === '{' || input.charAt(i) === '['){
+      stack.push(input.charAt(i));
     } else {
-      if(queue.isEmpty()){
+      if(stack.isEmpty()){
         return false;
       }
-      if(inputReversed.charAt(i) === '(' && queue.peek()!== ')' ||
-      inputReversed.charAt(i) === '[' && queue.peek()!== ']' ||
-      inputReversed.charAt(i) === '{' && queue.peek()!== '}'){
+      if(input.charAt(i) === ')' && stack.peek()!== '(' ||
+      input.charAt(i) === ']' && stack.peek()!== '[' ||
+      input.charAt(i) === '}' && stack.peek()!== '{'){
         return false;
       }
-      queue.dequeue();
+      stack.pop();
     }
   }
-  return queue.isEmpty();
+  return stack.isEmpty();
 }
 
 
