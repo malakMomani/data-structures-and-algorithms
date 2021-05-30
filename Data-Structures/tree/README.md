@@ -17,6 +17,7 @@ for Binary Tree :
 - pre-order -> O(n)
 - in-order -> O(n)
 - post-order -> O(n)
+- findMaximumValue -> O(n)
 
 for Binary Search Tree :
 

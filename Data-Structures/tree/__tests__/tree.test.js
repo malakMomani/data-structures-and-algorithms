@@ -50,6 +50,12 @@ describe('Binary Tree', ()=> {
     let postOrderResult = tree.postOrder();
     expect(postOrderResult).toEqual(expected);
   });
+
+  // -------------------------- challenge 16 find-maximum-value ----------------------------------
+
+  it('find a maximum value in the tree',()=>{
+    expect(tree.findMaximumValue()).toEqual(9);
+  });
 });
 
 describe('Binary Search Tree' ,()=>{
