@@ -42,6 +42,22 @@ class BinaryTree {
     traverse(this.root);
     return result;
   }
+
+  // -------------------------- challenge 16 find-maximum-binary-tree ----------------------------
+
+  findMaximumValue(){
+    if(!this.root) throw new Error('Empty tree');
+    let max = 0;
+    function check(node){
+      if(node.value > max){
+        max = node.value;
+      }
+      if(node.left) check(node.left);
+      if(node.right) check(node.right);
+    }
+    check(this.root);
+    return max;
+  }
 }
 
 class BinarySearchTree {
@@ -96,8 +112,8 @@ class BinarySearchTree {
     traverse(this.root);
     return result;
   }
-}
 
+}
 
 module.exports = {
   BinaryTree,
