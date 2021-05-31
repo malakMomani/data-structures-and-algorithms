@@ -16,7 +16,8 @@
 | code challenge 12      | Animal Shelter      |   [link](challenges/fifoAnimalShelter/fifo-animal-shelter.js) [test unit](challenges/__tests__/fifo-animal-shelter.test.js) |
 | code challenge 13      | Multi Bracket Validation.      |   [link](challenges/multi-bracket-validation/multi-bracket-validation.js) [test unit](challenges/__tests__/multi-bracket-validation.test.js) |
 | code challenge 15      | Binary Tree \ Binary Search Tree      |   [link](Data-Structures/tree/tree.js) [test unit](Data-Structures/tree/__tests__/tree.test.js)|
-| code challenge 16      | Binary Tree \ findMaximumValue      |   [link](Data-Structures/tree/tree.js) [test unit](Data-Structures/tree/__tests__/tree.test.js)|
+| code challenge 16      | Binary Tree \ findMaximumValue      |   [link](Data-Structures/tree/tree.js) [test unit](Data-Structures/tree/__tests__/tree.test.js)|\
+| code challenge 17      | Binary Tree \ Breadth First Traversal     |   [link](Data-Structures/tree/tree.js) [test unit](Data-Structures/tree/__tests__/tree.test.js)|
 
 See [setup instructions](https://codefellows.github.io/setup-guide/code-301/3-code-challenges), in the Code 301 Setup Guide.
 

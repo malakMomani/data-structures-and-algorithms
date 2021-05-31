@@ -2,6 +2,7 @@
 
 const BinaryTree = require('../tree');
 const Node = require('../node');
+
 let tree = null;
 describe('Binary Tree', ()=> {
 
@@ -48,6 +49,7 @@ describe('Binary Tree', ()=> {
   it ('postOrder', ()=> {
     let expected = [8, 9, 7, 6, 2, 4, 5, 3, 1];
     let postOrderResult = tree.postOrder();
+    //sconsole.log(treeify.asTree(tree,true));
     expect(postOrderResult).toEqual(expected);
   });
 
@@ -55,6 +57,14 @@ describe('Binary Tree', ()=> {
 
   it('find a maximum value in the tree',()=>{
     expect(tree.findMaximumValue()).toEqual(9);
+  });
+
+  // -------------------------- challenge 17 breadth first traversal ----------------------------------
+
+  it('breadth first traversal',()=>{
+    let expected = [1, 2, 3, 6, 4, 5, 7, 8, 9];
+    let bf = tree.breadthFirst();
+    expect(bf).toEqual(expected);
   });
 });
 
