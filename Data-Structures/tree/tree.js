@@ -1,7 +1,7 @@
 'use strict';
 
 const Node = require('../tree/node.js');
-
+const queue = require('../stacksAndQueues/stacks-and-queues.js');
 
 class BinaryTree {
   constructor(root = null){
@@ -57,6 +57,24 @@ class BinaryTree {
     }
     check(this.root);
     return max;
+  }
+
+  // ----------------------- challenge 17  breadth first ----------------------------
+
+  breadthFirst() {
+    let result =[];
+    let q = new queue.Queue();
+    q.enqueue(this.root);
+
+    function traverse(){
+      let current = q.dequeue();
+      result.push(current.value.value);
+      if(current.value.left) q.enqueue(current.value.left);
+      if(current.value.right) q.enqueue(current.value.right);
+      if(!q.isEmpty()) traverse();
+    }
+    traverse();
+    return result;
   }
 }
 

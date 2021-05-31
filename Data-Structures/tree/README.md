@@ -18,6 +18,10 @@ for Binary Tree :
 - in-order -> O(n)
 - post-order -> O(n)
 - findMaximumValue -> O(n)
+- breadthfirst -> O(n)
+
+![BFWhiteboard](../../assets/bf.png)
+![BF](../../assets/breadthfirst.jpg)
 
 for Binary Search Tree :
 
