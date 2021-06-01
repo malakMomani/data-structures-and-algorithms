@@ -47,10 +47,10 @@ describe('Fuzz Buzz Tree function',()=>{
     expect(result.root.childern[0].childern[2].value).toEqual('Buzz');
     expect(result.root.childern[1].childern[1].value).toEqual('Fizz');
     expect(result.root.childern[0].childern[1].childern[0].value).toEqual('Buzz');
-    expect(result.root.childern[0].childern[0].childern[0].value).toEqual('Fizz');
-    expect(result.root.childern[0].childern[0].childern[1].value).toEqual('Fizz');
-    expect(result.root.childern[0].childern[0].childern[2].value).toEqual('71');
-    expect(result.root.childern[0].childern[0].childern[3].value).toEqual('FizzBuzz');
+    expect(result.root.childern[1].childern[1].childern[0].value).toEqual('Fizz');
+    expect(result.root.childern[1].childern[1].childern[1].value).toEqual('Fizz');
+    expect(result.root.childern[1].childern[1].childern[2].value).toEqual('71');
+    expect(result.root.childern[1].childern[1].childern[3].value).toEqual('FizzBuzz');
     expect(result.root.childern[0].childern[2].childern[3].value).toEqual('8');
 
   });
