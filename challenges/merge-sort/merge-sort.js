@@ -66,6 +66,7 @@ function merge(left, right, arr){
     }
     k++;
   }
+  //copy the rest of right array to the main one
   if(i === left.length){
     while(j < right.length){
       arr[k]=right[j];
@@ -73,6 +74,7 @@ function merge(left, right, arr){
       j++;
     }
   } else {
+  //copy the rest of right array to the main one
     while(i < left.length){
       arr[k]=left[i];
       k++;
