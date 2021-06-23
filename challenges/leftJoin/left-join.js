@@ -1,5 +1,6 @@
 'use strict';
 
+// const HashTable = require('../../Data-Structures/hashtable/hashtable.js')
 
 function left_join(hash1, hash2) {
 
@@ -14,7 +15,7 @@ function left_join(hash1, hash2) {
     }
   });
 
-  console.log(keys);
+  // console.log(keys);
 
   hash2.table.forEach((item) => {
     let current = item.head;
@@ -26,7 +27,6 @@ function left_join(hash1, hash2) {
       current = current.next;
     }
   });
-  console.log('shared' ,shared);
 
   for (let i = 0; i < keys.length; i++) {
     let fisrt = hash1.get(keys[i]);
