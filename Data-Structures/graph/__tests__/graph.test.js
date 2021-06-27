@@ -42,7 +42,7 @@ describe('Graph Class', () => {
     myGraph.addVertex(end);
 
     myGraph.addDirectedEdge(start, end);
-    expect(myGraph.getNeighbours(start)).toEqual([{value:20 , weight:undefined}]);
+    expect(myGraph.getNeighbours(start)).toEqual([{ value: 20, weight: undefined }]);
   });
 
   it('A collection of all nodes can be properly retrieved from the graph', () => {
@@ -57,20 +57,54 @@ describe('Graph Class', () => {
     expect(myGraph.getNeighbours(two)[0].weight).toEqual(undefined);
   });
 
-  it('The proper size is returned, representing the number of nodes in the graph',()=>{
+  it('The proper size is returned, representing the number of nodes in the graph', () => {
     expect(myGraph.size()).toEqual(9);
   });
 
-  it('A graph with only one node and edge can be properly returned',()=>{
+  it('A graph with only one node and edge can be properly returned', () => {
     const g = new Graph();
     const d = new Vertex('Welcome');
     g.addVertex(d);
     expect(g.getVertices()).toEqual(['Welcome']);
   });
 
-  it('An empty graph properly returns null',()=>{
+  it('An empty graph properly returns null', () => {
     const g = new Graph();
     expect(g.getVertices()).toEqual([]);
+  });
+
+
+  //////////////////////////// code challenge 36 ////////////////////////////////
+
+  it('breadth first traversal', () => {
+    const myGraph = new Graph();
+
+    const pandora = new Vertex('Pandora');
+    const arendelle = new Vertex('Arendelle');
+    const monstropolis = new Vertex('Monstropolis');
+    const naboo = new Vertex('Naboo');
+    const metroville = new Vertex('Metroville');
+    const narina = new Vertex('Narnia');
+
+
+    myGraph.addVertex(pandora);
+    myGraph.addVertex(arendelle);
+    myGraph.addVertex(monstropolis);
+    myGraph.addVertex(naboo);
+    myGraph.addVertex(metroville);
+    myGraph.addVertex(narina);
+
+    myGraph.addDirectedEdge(pandora, arendelle);
+    myGraph.addDirectedEdge(arendelle, metroville);
+    myGraph.addDirectedEdge(arendelle, monstropolis);
+    myGraph.addDirectedEdge(monstropolis, metroville);
+    myGraph.addDirectedEdge(monstropolis, naboo);
+    myGraph.addDirectedEdge(naboo, metroville);
+    myGraph.addDirectedEdge(naboo, narina);
+    myGraph.addDirectedEdge(metroville, narina);
+
+
+    expect(myGraph.breadthFirst(pandora)).toEqual(['Pandora' , 'Arendelle', 'Metroville', 'Monstropolis', 'Narnia', 'Naboo']);
   });
 
 });
