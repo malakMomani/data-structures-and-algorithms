@@ -1,6 +1,7 @@
 'use strict';
 
 const Edge = require('./edge.js');
+const { Queue } = require('../stacksAndQueues/stacks-and-queues');
 
 class Graph {
   constructor() {
@@ -24,7 +25,7 @@ class Graph {
 
   getVertices() {
     let vertices = [];
-    let objs =[];
+    let objs = [];
     for (const k of this.adjacencyList.keys()) {
       objs.push(k);
     }
@@ -32,7 +33,7 @@ class Graph {
       vertices.push(v.value);
     });
 
-    return vertices? vertices: null;
+    return vertices ? vertices : null;
   }
 
   // print() {
@@ -49,16 +50,59 @@ class Graph {
     }
 
     let neighbours = this.adjacencyList.get(vertex);
-    console.log('--------------' , neighbours);
+    console.log('--------------', neighbours);
     let nSet = [];
-    neighbours.forEach(n =>{
-      nSet.push({value : n.vertex.value , weight: n.vertex.weight});
+    neighbours.forEach(n => {
+      nSet.push({ value: n.vertex.value, weight: n.vertex.weight });
     });
     return nSet;
   }
 
   size() {
     return this.adjacencyList.size;
+  }
+
+  ////////////////////////////////////////////////// code challenge 36 //////////////////////////////////////////
+  // function BFS
+  //    Initialize an empty queue, empty 'result' array & a 'visited' map
+  //    Add the starting vertex to the queue & visited map
+  //    While Queue is not empty:
+  //      - Dequeue and store current vertex
+  //      - Push current vertex to result array
+  //      - Iterate through current vertex's adjacency list:
+  //        - For each adjacent vertex, if vertex is unvisited:
+  //          - Add vertex to visited map
+  //          - Enqueue vertex
+  //    Return result array
+
+
+  breadthFirst(start) {
+
+    const visited = new Map();
+    const queue = new Queue();
+    const result = new Array();
+
+    queue.enqueue(start);
+    visited.set(start, true);
+
+    while (!queue.isEmpty()) {
+      let current = queue.dequeue();
+      result.push(current);
+
+      const adjacencies = this.adjacencyList.get(current.value);
+
+      adjacencies.forEach(adjacency => {
+        if (!visited.get(adjacency.vertex)) {
+          visited.set(adjacency.vertex, true);
+          queue.enqueue(adjacency.vertex);
+        }
+      });
+    }
+    let finalResult = [];
+    result.forEach(node =>{
+      finalResult.push(node.value.value);
+    });
+    return finalResult;
   }
 }
 

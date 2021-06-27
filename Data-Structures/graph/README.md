@@ -15,6 +15,8 @@ getVertices -> O(n)
 getNeighbours -> O(n)
 size -> O(1)
 
+breadthFirst -> O(|V| + |E|)
+
 ## API
 
 addVertex --> it takes a vertex as parameter and set it to adjacency list and return it
@@ -26,3 +28,7 @@ getVertices --> it return all vertices in the graph
 getNeighbours --> it take a vertex as parameter and find his neighbours
 
 size --> returns number of vertices in the graph
+
+whiteboaed for BFS :
+
+![w](/assets/bfs-graph.jpg)
