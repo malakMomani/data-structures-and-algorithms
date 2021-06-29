@@ -1,7 +1,8 @@
 'use strict';
 
 const Edge = require('./edge.js');
-const { Queue } = require('../stacksAndQueues/stacks-and-queues');
+const Vertex = require('./vertex.js');
+const { Queue, Stack } = require('../stacksAndQueues/stacks-and-queues');
 
 class Graph {
   constructor() {
@@ -99,10 +100,38 @@ class Graph {
       });
     }
     let finalResult = [];
-    result.forEach(node =>{
+    result.forEach(node => {
       finalResult.push(node.value.value);
     });
     return finalResult;
+  }
+
+
+  dfs(node) {
+    const visited = new Map();
+    const stack = new Stack();
+    const result = new Array();
+
+    for(let i = 0 ; i< this.adjacencyList.size ; i++) {
+      visited.set(this.adjacencyList[i], false);
+    }
+    stack.push(node);
+    console.log(visited.get(node.value.value),'******');
+    while (!stack.isEmpty()) {
+      console.log('1 ---------------------');
+      node = stack.pop();
+      if (!visited.get(node.value.value)) {
+        result.push(node.value.value);
+        visited.set(node.value.value, true);
+        console.log(`we visited ${node.value.value}`);
+        let arr = this.adjacencyList.get(node.value);
+        for (let j = 0; j < arr.length; j++) {
+          console.log(arr[j]);
+          stack.push(arr[j].vertex);
+        }
+      }
+    }
+    return result;
   }
 }
 

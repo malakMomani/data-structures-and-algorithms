@@ -104,7 +104,42 @@ describe('Graph Class', () => {
     myGraph.addDirectedEdge(metroville, narina);
 
 
-    expect(myGraph.breadthFirst(pandora)).toEqual(['Pandora' , 'Arendelle', 'Metroville', 'Monstropolis', 'Narnia', 'Naboo']);
+    expect(myGraph.breadthFirst(pandora)).toEqual(['Pandora', 'Arendelle', 'Metroville', 'Monstropolis', 'Narnia', 'Naboo']);
   });
 
+  it('depth first traversal', () => {
+    let myGraph = new Graph();
+    const A = new Vertex('A');
+    const B = new Vertex('B');
+    const D = new Vertex('D');
+    const F = new Vertex('F');
+    const H = new Vertex('H');
+    const E = new Vertex('E');
+    const C = new Vertex('C');
+    const G = new Vertex('G');
+
+
+
+    myGraph.addVertex(A);
+    myGraph.addVertex(B);
+    myGraph.addVertex(C);
+    myGraph.addVertex(D);
+    myGraph.addVertex(E);
+    myGraph.addVertex(F);
+    myGraph.addVertex(H);
+    myGraph.addVertex(G);
+
+
+    myGraph.addDirectedEdge(A, B);
+    myGraph.addDirectedEdge(B, C);
+    myGraph.addDirectedEdge(C, G);
+    myGraph.addDirectedEdge(A, D);
+    myGraph.addDirectedEdge(D, F);
+    myGraph.addDirectedEdge(D, H);
+    myGraph.addDirectedEdge(D, E);
+    myGraph.addDirectedEdge(F, H);
+    myGraph.addDirectedEdge(B, D);
+
+    expect(myGraph.dfs(A)).toEqual(['A', 'D', 'E','H', 'F', 'B','C', 'G']);
+  });
 });
